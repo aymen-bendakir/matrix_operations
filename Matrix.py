@@ -19,10 +19,6 @@ class Matrix:
         self.columns = m  # number of columns
         self.body = body  # the body of the matrix (array of n arrays of m cells)
 
-    @classmethod
-    def Matrix(cls, n, m, body):
-        return cls()
-
     @staticmethod
     def read(n, m):
         """reads the body of a n*m matrix from the input"""
@@ -121,6 +117,7 @@ class Matrix:
 
 
 class Rank:
+    """represents the result of calculationg the rank of a matrix"""
     def __init__(self, matrix, r, significant_matrix, significant_det, list_i_j):
         self.main_matrix = matrix  # the old matrix we wanted to calculate its rank
         self.rank = r  # the rank
